@@ -57,8 +57,7 @@ class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return StreamBuilder(
-      stream: stream.getCoreStats,
-    )
+    
+    
   }
 }
