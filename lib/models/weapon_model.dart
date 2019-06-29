@@ -1,4 +1,4 @@
-class WeaponModel{
+class WeaponModel {
 
   //accuracyAndCrit Map in firestore
   //accNaMo

@@ -1,38 +1,67 @@
 class ArmorModel {
+  final String armorClass;
 
-String armorClass;
-
-int muscleReq;
+  final int muscleReq;
 
 //protections Map in firestore
-int critResist;
-int curve;
-int flat;
-int graze;
-int shrug;
+  final int critResist;
+  final int curve;
+  final int flat;
+  final int graze;
+  final int shrug;
 
 //restrictions Map in firestore
-int agiSave;
-int dash;
-int dexSave;
-int hearing;
-int initiative;
-int moveTime;
-int passiveDodge;
-int reactDodge;
-int reactionWindow;
-int refSave;
-int vision;
+  final int agiSave;
+  final int dash;
+  final int dexSave;
+  final int hearing;
+  final int initiative;
+  final int moveTime;
+  final int passiveDodge;
+  final int reactDodge;
+  final int reactionWindow;
+  final int refSave;
+  final int vision;
 
+  ArmorModel(
+      this.armorClass,
+      this.muscleReq,
+      this.critResist,
+      this.curve,
+      this.flat,
+      this.graze,
+      this.shrug,
+      this.agiSave,
+      this.dash,
+      this.dexSave,
+      this.hearing,
+      this.initiative,
+      this.moveTime,
+      this.passiveDodge,
+      this.reactDodge,
+      this.reactionWindow,
+      this.refSave,
+      this.vision);
 
-
-
-
-
-
-
-
-
+      ArmorModel.fromMap(Map map)
+      : armorClass = map['armorClass'],
+      muscleReq = map['muscleReq'],
+      critResist = map['critResist'],
+      curve = map['curve'],
+      flat = map['flat'],
+      graze = map['graze'],
+      shrug = map['shrug'],
+      agiSave = map['agiSave'],
+      dash = map['dash'],
+      dexSave = map['dexSave'],
+      hearing = map['hearing'],
+      initiative = map['initiative'],
+      moveTime = map['moveTime'],
+      passiveDodge = map['passiveDodge'],
+      reactDodge =  map['reactDodge'],
+      reactionWindow = map['reactionWindow'],
+      refSave = map['refSave'],
+      vision = map['vision'];
 
 
 
