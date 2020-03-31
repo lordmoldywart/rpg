@@ -44,7 +44,7 @@ mixin StatDerivations {
     if (derivedStat.isNegative == true) {
       return 0;
     } else {
-      return derivedStat / 2.ceil();
+      return (derivedStat / 2).ceil();
     }
   }
 
@@ -53,7 +53,7 @@ mixin StatDerivations {
     if (derivedStat.isNegative == true) {
       return 0;
     } else {
-      return derivedStat / 2.floor();
+      return (derivedStat / 2).floor();
     }
   }
 
@@ -68,7 +68,7 @@ mixin StatDerivations {
   oddNeMo(int stat) {
     int derivedStat = stat - 10;
     if (derivedStat.isNegative == true)
-      return derivedStat / 2.floor();
+      return (derivedStat / 2).floor();
     else
       return 0;
   }
@@ -76,7 +76,7 @@ mixin StatDerivations {
   evenNeMo(int stat) {
     int derivedStat = stat - 10;
     if (derivedStat.isNegative == true)
-      return derivedStat / 2.ceil();
+      return (derivedStat / 2).ceil();
     else
       return 0;
   }

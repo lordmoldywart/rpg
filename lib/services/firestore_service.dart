@@ -9,12 +9,7 @@ class FirestoreService with StatDerivations {
 
   final Firestore _firestoreDb = Firestore.instance;
 
-  Map<String, int> mapTransformer(Map<String, dynamic> stats) {
-    fullStats = stats
-
-
-  }
-
+  
   Stream<TestModel> testModelStream() {
     return _firestoreDb
     .collection('characters')
