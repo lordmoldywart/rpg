@@ -44,13 +44,18 @@ class ArmorModel {
       this.vision);
 
       ArmorModel.fromMap(Map map)
-      : armorClass = map['armorClass'],
+      : armorClass = map['class'],
       muscleReq = map['muscleReq'],
+
+//Protections
       critResist = map['critResist'],
       curve = map['curve'],
       flat = map['flat'],
       graze = map['graze'],
       shrug = map['shrug'],
+
+
+//Restrictions (negative numbers)
       agiSave = map['agiSave'],
       dash = map['dash'],
       dexSave = map['dexSave'],

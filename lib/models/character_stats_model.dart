@@ -1,4 +1,6 @@
-class CharacterStatsModel {
+import 'package:rpg/stat_derivations.dart';
+
+class CharacterStatsModel with StatDerivations {
   final int muscle;
   final int muscleNaMo;
   final int muscleOddNaMo;
@@ -290,6 +292,7 @@ class CharacterStatsModel {
       memoryNeMo = data['memoryNeMo'],
       memoryOddNeMo = data['memoryOddNaMo'],
       memoryEvenNeMo = data['memoryEvenNeMo'];
+  
         
       }
       

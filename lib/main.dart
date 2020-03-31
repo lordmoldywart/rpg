@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:rpg/models/test_model.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:rpg/services/db.dart';
+import 'package:rpg/services/firestore_service.dart';
 import 'package:provider/provider.dart';
 import 'package:rpg/stat_derivations.dart';
+import 'package:rpg/tabs/test_tab.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final db = DbService();
+  final db = FirestoreService();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,12 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            body: TabBarView(children: <Widget>[TestWidget()]),
+            body: StreamBuilder<Object>(
+              stream: null,
+              builder: (context, snapshot) {
+                return TabBarView(children: <Widget>[TestWidget()]);
+              }
+            ),
           ),
         ),
       ),
@@ -40,15 +46,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class TestWidget extends StatelessWidget with StatDerivations {
-  final db = DbService();
-  @override
-  Widget build(BuildContext context) {
-    var testField = Provider.of<TestModel>(context);
-    int testFieldNaMo = naMo(testField.muscle);
 
-    return Column(
-      children: <Widget>[Text('$testFieldNaMo')],
-    );
-  }
-}

@@ -59,7 +59,7 @@ mixin StatDerivations {
 
   neMo(int stat) {
     int derivedStat = stat - 10;
-    if (derivedStat <= 10)
+    if (derivedStat <= 0)
       return derivedStat;
     else
       return 0;

@@ -13,6 +13,8 @@ class TestModel {
   final int intelligence;
   final int memory;
 
+  
+
   TestModel(
       this.muscle,
       this.fitness,
@@ -36,6 +38,7 @@ class TestModel {
   willpower = doc['willpower'],
   intelligence = doc['intelligence'],
   memory = doc['memory'];
+  
 
   
 
